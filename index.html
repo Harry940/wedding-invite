@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu ❤️ Sejal | November 29, 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="mandala" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="50" cy="50" r="30" fill="none" stroke="%23ff6b6b" stroke-width="2" opacity="0.3"/><circle cx="50" cy="50" r="20" fill="none" stroke="%23feca57" stroke-width="1" opacity="0.4"/><circle cx="50" cy="50" r="10" fill="none" stroke="%23ff9ff3" stroke-width="1" opacity="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(%23mandala)"/></svg>');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .date-banner {
+            background: rgba(255, 107, 107, 0.9);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            animation: fadeInUp 1s ease-out 0.6s both;
+            box-shadow: 0 8px 32px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #ff6b6b;
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '✨';
+            display: block;
+            font-size: 2rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Story Section */
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .story-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transform: translateY(50px);
+            opacity: 0;
+            animation: slideInUp 0.8s ease-out forwards;
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .story-card:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .story-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .story-card h3 {
+            color: #ff6b6b;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .story-card p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Traditions Section */
+        .traditions {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 30px;
+            margin: 3rem 0;
+            padding: 4rem 2rem;
+        }
+
+        .traditions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tradition-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .tradition-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .tradition-item .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Jaipur Section */
+        .jaipur-section {
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+            color: white;
+            text-align: center;
+        }
+
+        .jaipur-highlights {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .jaipur-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 3rem auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(to bottom, #ff6b6b, #feca57, #ff9ff3, #667eea);
+            transform: translateX(-50%);
+            border-radius: 3px;
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 4rem 0;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            width: 45%;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 55%;
+            border-right: 5px solid #feca57;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 25px;
+            height: 25px;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            border: 4px solid white;
+            box-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
+            z-index: 10;
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -65px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -65px;
+        }
+
+        .timeline-photo {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-photo:hover {
+            transform: scale(1.02);
+        }
+
+        .timeline-photo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            transition: opacity 0.3s ease;
+        }
+
+        .timeline-photo:hover::before {
+            opacity: 0.1;
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Photo Styles */
+        .navratri-photo {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><defs><pattern id="garba" patternUnits="userSpaceOnUse" width="40" height="40"><circle cx="20" cy="20" r="15" fill="none" stroke="%23ff6b6b" stroke-width="2" opacity="0.6"/><circle cx="20" cy="20" r="8" fill="none" stroke="%23feca57" stroke-width="1" opacity="0.8"/></pattern></defs><rect width="100%" height="100%" fill="url(%23garba)"/><text x="200" y="100" text-anchor="middle" fill="white" font-size="24" font-family="serif">🎭 Navratri Magic</text></svg>');
+            background-size: cover;
+        }
+
+        .college-photo {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect width="100%" height="100%" fill="%23f093fb"/><text x="200" y="90" text-anchor="middle" fill="white" font-size="20" font-family="serif">📚 College Days</text><text x="200" y="120" text-anchor="middle" fill="white" font-size="30">💕</text></svg>');
+            background-size: cover;
+        }
+
+        .family-photo {
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect width="100%" height="100%" fill="%23ffd89b"/><text x="200" y="90" text-anchor="middle" fill="white" font-size="18" font-family="serif">👨‍👩‍👧‍👦 Family Blessings</text><text x="200" y="120" text-anchor="middle" fill="white" font-size="30">🙏</text></svg>');
+            background-size: cover;
+        }
+
+        .jaipur-photo {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><defs><pattern id="palace" patternUnits="userSpaceOnUse" width="60" height="60"><polygon points="30,10 50,30 30,50 10,30" fill="none" stroke="%23ff6b6b" stroke-width="2" opacity="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(%23palace)"/><text x="200" y="85" text-anchor="middle" fill="white" font-size="18" font-family="serif">🏰 Jaipur Pre-Wedding</text><text x="200" y="115" text-anchor="middle" fill="white" font-size="25">👑</text></svg>');
+            background-size: cover;
+        }
+
+        .wedding-photo {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><defs><pattern id="wedding" patternUnits="userSpaceOnUse" width="50" height="50"><circle cx="25" cy="25" r="20" fill="none" stroke="%23ff6b6b" stroke-width="3" opacity="0.4"/><circle cx="25" cy="25" r="10" fill="none" stroke="%23feca57" stroke-width="2" opacity="0.6"/><circle cx="25" cy="25" r="5" fill="%23ff9ff3" opacity="0.8"/></pattern></defs><rect width="100%" height="100%" fill="url(%23wedding)"/><text x="200" y="90" text-anchor="middle" fill="white" font-size="18" font-family="serif">💑 Wedding Day</text><text x="200" y="120" text-anchor="middle" fill="white" font-size="30">💍</text></svg>');
+            background-size: cover;
+        }
+
+        /* Photo Gallery Grid */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+            z-index: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 0.3;
+        }
+
+        .gallery-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            z-index: 2;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .year {
+            color: #ff6b6b;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Countdown */
+        .countdown {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+            border-radius: 30px;
+            margin: 3rem 0;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255,255,255,0.2);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            min-width: 100px;
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .section {
+                padding: 3rem 1rem;
+            }
+            
+            .timeline-item {
+                width: 90%;
+                left: 5% !important;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item:nth-child(odd)::before {
+                left: -30px !important;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                height: 250px;
+            }
+        }
+
+        /* Decorative Elements */
+        .mandala-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 3px solid rgba(255, 107, 107, 0.3);
+            border-radius: 50%;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .mandala-decoration::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgba(254, 202, 87, 0.4);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .decoration-1 { top: 10%; right: 10%; animation-delay: 0s; }
+        .decoration-2 { bottom: 20%; left: 10%; animation-delay: 1s; }
+        .decoration-3 { top: 30%; left: 5%; animation-delay: 2s; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#traditions">Traditions</a></li>
+            <li><a href="#jaipur">Jaipur Memories</a></li>
+            <li><a href="#countdown">Countdown</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="mandala-decoration decoration-1"></div>
+        <div class="mandala-decoration decoration-2"></div>
+        <div class="mandala-decoration decoration-3"></div>
+        
+        <div class="hero-content">
+            <h1>Himanshu ❤️ Sejal</h1>
+            <p>#SejFoundHerHIM</p>
+            <p>Two Hearts, Two Cultures, One Beautiful Journey</p>
+            <div class="date-banner">
+                November 29, 2025 | गुजराती बानिया मिलन
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story" class="section">
+        <h2>Our Love Story</h2>
+        <div class="story-grid">
+            <div class="story-card">
+                <h3>🎭 The Navratri Magic (2018)</h3>
+                <p>It was during the vibrant nine nights of Navratri when destiny played its beautiful tune. Amidst the swirling colors of garba and the rhythmic beats of dhol, Himanshu and Sejal's eyes met for the first time. What started as a chance encounter during the festival of Goddess Durga became the beginning of a love story that would span seven beautiful years.</p>
+            </div>
+            
+            <div class="story-card">
+                <h3>💕 Seven Years of Love</h3>
+                <p>From that magical Navratri night, our bond grew stronger with each passing day. Through college years, career changes, family gatherings, and life's ups and downs - we discovered that we were not just lovers but best friends. Our Gujarati and Baniya traditions taught us the values of respect, family, and togetherness that became the foundation of our relationship.</p>
+            </div>
+            
+            <div class="story-card">
+                <h3>💍 The Perfect Union</h3>
+                <p>After seven years of courtship, with the blessings of our families and Lord Ganesha, we are ready to embark on this sacred journey of marriage. Our love marriage represents the beautiful blend of tradition and modernity, where ancient values meet contemporary love stories.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditions Section -->
+    <section id="traditions" class="section">
+        <div class="traditions">
+            <h2 style="color: white;">Cultural Heritage</h2>
+            <div class="traditions-grid">
+                <div class="tradition-item">
+                    <span class="icon">🕉️</span>
+                    <h3>Gujarati Traditions</h3>
+                    <p>Rich heritage of business acumen, vibrant festivals, and strong family values. Our Gujarat roots bring the essence of entrepreneurship and cultural richness.</p>
+                </div>
+                
+                <div class="tradition-item">
+                    <span class="icon">🏛️</span>
+                    <h3>Baniya Heritage</h3>
+                    <p>Known for wisdom in trade and commerce, strong community bonds, and deep spiritual values. Sejal brings the grace and intelligence of this respected community.</p>
+                </div>
+                
+                <div class="tradition-item">
+                    <span class="icon">🤝</span>
+                    <h3>Beautiful Blend</h3>
+                    <p>Our union represents the harmony between two business communities, combining traditions while creating our own unique love story.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jaipur Section -->
+    <section id="jaipur" class="section">
+        <div class="jaipur-section">
+            <h2 style="color: white;">Jaipur: Our Pre-Wedding Canvas</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">
+                We chose the Pink City to capture our pre-wedding moments, where every frame tells a story of royal romance
+            </p>
+            
+            <div class="jaipur-highlights">
+                <div class="jaipur-item">
+                    <h3>🏰 Royal Palaces</h3>
+                    <p>Against the majestic backdrop of Hawa Mahal and City Palace, our love story found its royal setting</p>
+                </div>
+                
+                <div class="jaipur-item">
+                    <h3>🌅 Golden Hour Magic</h3>
+                    <p>The amber fort witnessed our golden moments as the sun painted the sky in hues of our love</p>
+                </div>
+                
+                <div class="jaipur-item">
+                    <h3>💖 Timeless Romance</h3>
+                    <p>Every street, every palace, every sunset in Jaipur became a chapter in our pre-wedding story</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section">
+        <h2>Our Journey Together</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-photo navratri-photo">
+                    <div class="photo-caption">Dancing Hearts Unite ✨</div>
+                </div>
+                <div class="year">2018</div>
+                <h3>First Meeting at Navratri</h3>
+                <p>The festival of nine nights brought us together. Dancing to the same rhythm, we realized we were meant to be. Under the colorful lights and amid the melodious garba songs, two hearts found their perfect match.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-photo college-photo">
+                    <div class="photo-caption">Growing Together 💕</div>
+                </div>
+                <div class="year">2019-2023</div>
+                <h3>College & Career Journey</h3>
+                <p>From late-night study sessions to celebrating each other's achievements, we navigated life's journey hand in hand. Through college graduations, first jobs, and family celebrations - every milestone became sweeter when shared.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-photo family-photo">
+                    <div class="photo-caption">Blessed by Families 🙏</div>
+                </div>
+                <div class="year">2024</div>
+                <h3>Family Blessings</h3>
+                <p>Our families came together, celebrating the union of not just two hearts but two beautiful traditions. The joy in our parents' eyes and the warmth of acceptance made our bond even stronger.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-photo jaipur-photo">
+                    <div class="photo-caption">Royal Romance 👑</div>
+                </div>
+                <div class="year">2025</div>
+                <h3>Jaipur Pre-Wedding Magic</h3>
+                <p>We captured our love story against the royal backdrop of the Pink City. Every palace, every sunset, every stolen glance became a frame in our pre-wedding album, creating memories to last a lifetime.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-photo wedding-photo">
+                    <div class="photo-caption">Forever Begins 💍</div>
+                </div>
+                <div class="year">November 29, 2025</div>
+                <h3>Our Wedding Day</h3>
+                <p>The culmination of seven years of love, laughter, and dreams coming true as we take our sacred vows. Today we become one soul in two bodies, blessed by tradition and boundless love.</p>
+            </div>
+        </div>
+
+        <!-- Photo Gallery Section -->
+        <div style="margin-top: 5rem;">
+            <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #2c3e50;">
+                Moments We Treasure 📸
+            </h3>
+            
+            <div class="photo-gallery">
+                <div class="gallery-item" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 300 300&quot;><circle cx=&quot;150&quot; cy=&quot;150&quot; r=&quot;100&quot; fill=&quot;none&quot; stroke=&quot;%23ff6b6b&quot; stroke-width=&quot;3&quot; opacity=&quot;0.7&quot;/><text x=&quot;150&quot; y=&quot;140&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;30&quot;>🎭</text><text x=&quot;150&quot; y=&quot;170&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;16&quot;>First Dance</text></svg>'); background-size: cover;">
+                    <div class="gallery-content">
+                        <h4>Navratri Nights</h4>
+                        <p>Where it all began - dancing under the stars</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 300 300&quot;><rect x=&quot;50&quot; y=&quot;100&quot; width=&quot;200&quot; height=&quot;100&quot; fill=&quot;none&quot; stroke=&quot;%23feca57&quot; stroke-width=&quot;3&quot; opacity=&quot;0.8&quot;/><text x=&quot;150&quot; y=&quot;140&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;30&quot;>📚</text><text x=&quot;150&quot; y=&quot;170&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;16&quot;>Study Dates</text></svg>'); background-size: cover;">
+                    <div class="gallery-content">
+                        <h4>College Memories</h4>
+                        <p>Love blooming in lecture halls and libraries</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" style="background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 300 300&quot;><polygon points=&quot;150,50 200,150 150,250 100,150&quot; fill=&quot;none&quot; stroke=&quot;%23ff9ff3&quot; stroke-width=&quot;3&quot; opacity=&quot;0.8&quot;/><text x=&quot;150&quot; y=&quot;140&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;30&quot;>🏰</text><text x=&quot;150&quot; y=&quot;170&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;16&quot;>Jaipur</text></svg>'); background-size: cover;">
+                    <div class="gallery-content">
+                        <h4>Pink City Romance</h4>
+                        <p>Royal backdrops for our love story</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 300 300&quot;><circle cx=&quot;120&quot; cy=&quot;120&quot; r=&quot;40&quot; fill=&quot;none&quot; stroke=&quot;%23ff6b6b&quot; stroke-width=&quot;3&quot; opacity=&quot;0.7&quot;/><circle cx=&quot;180&quot; cy=&quot;120&quot; r=&quot;40&quot; fill=&quot;none&quot; stroke=&quot;%23ff6b6b&quot; stroke-width=&quot;3&quot; opacity=&quot;0.7&quot;/><text x=&quot;150&quot; y=&quot;200&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;30&quot;>💕</text><text x=&quot;150&quot; y=&quot;230&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;16&quot;>Two Hearts</text></svg>'); background-size: cover;">
+                    <div class="gallery-content">
+                        <h4>Couple Moments</h4>
+                        <p>Candid captures of pure joy and laughter</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 300 300&quot;><circle cx=&quot;150&quot; cy=&quot;150&quot; r=&quot;80&quot; fill=&quot;none&quot; stroke=&quot;%23feca57&quot; stroke-width=&quot;4&quot; opacity=&quot;0.8&quot;/><circle cx=&quot;150&quot; cy=&quot;150&quot; r=&quot;50&quot; fill=&quot;none&quot; stroke=&quot;%23ff9ff3&quot; stroke-width=&quot;3&quot; opacity=&quot;0.9&quot;/><text x=&quot;150&quot; y=&quot;140&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;30&quot;>👨‍👩‍👧‍👦</text><text x=&quot;150&quot; y=&quot;170&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;16&quot;>Families</text></svg>'); background-size: cover;">
+                    <div class="gallery-content">
+                        <h4>Family Celebrations</h4>
+                        <p>Traditions, blessings, and endless love</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 300 300&quot;><path d=&quot;M150,50 L200,100 L150,200 L100,100 Z&quot; fill=&quot;none&quot; stroke=&quot;%23ff6b6b&quot; stroke-width=&quot;4&quot; opacity=&quot;0.8&quot;/><text x=&quot;150&quot; y=&quot;140&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;30&quot;>💍</text><text x=&quot;150&quot; y=&quot;170&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;16&quot;>Forever</text></svg>'); background-size: cover;">
+                    <div class="gallery-content">
+                        <h4>The Promise</h4>
+                        <p>Seven years leading to this beautiful moment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="countdown" class="section">
+        <div class="countdown">
+            <h2 style="color: white;">Countdown to Forever</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Until Himanshu and Sejal become one</p>
+            
+            <div class="countdown-timer" id="countdownTimer">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">--</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">--</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">--</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">--</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #2c3e50; color: white; text-align: center; padding: 3rem 2rem;">
+        <h3>With Love and Blessings</h3>
+        <p style="margin-top: 1rem; font-size: 1.1rem;">
+            हिमांशु वेड्स सेजल | નવરાત્રીથી વિવાહ સુધી | From Navratri to Vivah
+        </p>
+        <p style="margin-top: 1rem; opacity: 0.8;">
+            Two families, two traditions, one celebration of eternal love
+        </p>
+        <div style="margin-top: 2rem; font-size: 2rem;">
+            🎊 ❤️ 🎊
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date('November 29, 2025 10:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = weddingDate - now;
+
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                document.getElementById('countdownTimer').innerHTML = '<h3 style="font-size: 2rem;">🎉 We Are Married! 🎉</h3>';
+            }
+        }
+
+        // Update countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all story cards and timeline items
+        document.querySelectorAll('.story-card, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add floating animation to decorative elements
+        document.querySelectorAll('.mandala-decoration').forEach(el => {
+            el.classList.add('floating');
+        });
+
+        // Interactive hover effects
+        document.querySelectorAll('.story-card, .tradition-item, .jaipur-item').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+                card.style.boxShadow = '0 20px 60px rgba(0,0,0,0.2)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+                card.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+            });
+        });
+
+        // Add subtle parallax effect to hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
+</body>
+</html>
